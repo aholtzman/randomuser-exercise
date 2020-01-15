@@ -15,7 +15,12 @@ export default () => {
       <div>
         {people ? people.map((person, index) => {
           console.log(person)
-          return <div key={index}>test</div>
+          return  <div key={index}>
+                    <h2>{person.name.first} {person.name.last}</h2>
+                    <p>Gender: {person.gender}</p>
+                    <p>Country: {person.location.country}</p>
+                    <p>Birthdate: {person.dob.date}</p>
+                  </div>
         }) : <h1>...loading</h1>}
       </div>
     </div>
