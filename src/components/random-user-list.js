@@ -17,6 +17,7 @@ export default () => {
           const birthday = new Date(person.dob.date)
           const now = new Date()
           let message = 'test test'
+          const namePosessive = person.name.first[person.name.first.length - 1] === 's' ? `${person.name.first}'` : `${person.name.first}'s`
 
           if (birthday.getMonth() !== now.getMonth()) {
             message = (birthday.getMonth() > now.getMonth()) ? 'has yet to occur' : 'already happened'
@@ -33,7 +34,7 @@ export default () => {
                     <p>Gender: {person.gender}</p>
                     <p>Country: {person.location.country}</p>
                     <p>Birthdate: {birthday.toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric'})}</p>
-                    <p>{message}</p>
+                    <p>{namePosessive} birthday {message} {message === 'is today(!)' ? '' : 'this year.'}</p>
                   </div>
         }) : <h1>...loading</h1>}
       </div>
