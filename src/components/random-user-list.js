@@ -19,13 +19,13 @@ export default () => {
           let message = 'test test'
 
           if (birthday.getMonth() !== now.getMonth()) {
-            console.log('month no match')
+            message = (birthday.getMonth() > now.getMonth()) ? 'has yet to occur' : 'already happened'
           }
           else if (birthday.getDate() !== now.getDate()) {
-            console.log('day no match')
+            message = (birthday.getDate() > now.getDate()) ? 'has yet to occur' : 'already happened'
           }
           else {
-            console.log('day and month match')
+            message = 'is today(!)'
           }
 
           return  <div key={index}>
