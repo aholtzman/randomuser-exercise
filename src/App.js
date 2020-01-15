@@ -1,11 +1,4 @@
 import React from 'react'
+import List from './components/random-user-list'
 
-function App() {
-  return (
-    <div>
-      clean out boilerplate
-    </div>
-  )
-}
-
-export default App
+export default ()  => <List />
