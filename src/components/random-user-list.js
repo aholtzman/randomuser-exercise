@@ -13,7 +13,7 @@ export default () => {
     <div>
       <h1>random user list</h1>
       <div>
-        {people ? people.map((person, index) => {
+        {people ? people.sort((a, b) => a.name.last.localeCompare(b.name.last)).map((person, index) => {
           const birthday = new Date(person.dob.date)
           const now = new Date()
           let message = 'test test'
