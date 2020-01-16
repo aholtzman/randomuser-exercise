@@ -12,7 +12,7 @@ export default () => {
 
   return(
     <div>
-      <h1>random user list</h1>
+      <h1 style={{textAlign: 'center'}}>List of 20 People from randomuser.me</h1>
       <Users people={people} />
     </div>
   )
